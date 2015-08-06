@@ -82,13 +82,13 @@ public class Main {
                     sb.append(s);
                 }
                 String result = sb.toString();
-                if (result.equals("")) {
-                    errors.add(i);
-                }
-                else {
-                    System.out.println("Success: "+i);
-                    System.out.println(result+"\n");
-                }
+//                if (result.equals("")) {
+//                    System.out.print("Failure: "+i);
+//                }
+//                else {
+//                    System.out.println("Success: "+i);
+//                    System.out.println(result+"\n");
+//                }
 
                 defaultBucket.upsert(JsonDocument.create(i+"", JsonObject.fromJson(result)));
             }
